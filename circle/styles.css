@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.large-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border-radius: 50%;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.small-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.circle1 { background-color: #e74c3c; transform: translate(-50%, -50%) rotate(0deg) translate(80px) rotate(0deg) width 0.53s ease-in-out; }
+.circle2 { background-color: #2ecc71; transform: translate(-50%, -50%) rotate(45deg) translate(80px) rotate(-45deg); }
+.circle3 { background-color: #f39c12; transform: translate(-50%, -50%) rotate(90deg) translate(80px) rotate(-90deg); }
+.circle4 { background-color: #3498db; transform: translate(-50%, -50%) rotate(135deg) translate(80px) rotate(-135deg); }
+.circle5 { background-color: #9b59b6; transform: translate(-50%, -50%) rotate(180deg) translate(80px) rotate(-180deg); }
+.circle6 { background-color: #34495e; transform: translate(-50%, -50%) rotate(225deg) translate(80px) rotate(-225deg); }
+.circle7 { background-color: #e67e22; transform: translate(-50%, -50%) rotate(270deg) translate(80px) rotate(-270deg); }
+.circle8 { background-color: #ecf0f1; transform: translate(-50%, -50%) rotate(315deg) translate(80px) rotate(-315deg); }
+
+.container:hover .large-circle {
+  background-color: #e74c3c;
+}
+
+.container:hover .small-circle {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #2ecc71;
+  font-size: 8px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.container:hover .text {
+  opacity: 1;
+}
